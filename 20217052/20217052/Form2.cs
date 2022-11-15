@@ -47,7 +47,7 @@ namespace _20217052
                 using (SQLiteCommand command = con.CreateCommand())
                 {
                     command.CommandText =
-                        "create table t_product(CD INTEGER PRIMARY KEY AUTOINCREMENT, productname TEXT, price INTEGER)";
+                        "create table HCS_product(member_id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, address TEXT, phone_number)";
                     command.ExecuteNonQuery();
                 }
                 con.Close();
