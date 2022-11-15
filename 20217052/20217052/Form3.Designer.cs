@@ -120,7 +120,7 @@ namespace _20217052
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(518, 296);
+            this.dataGridView1.Size = new System.Drawing.Size(518, 326);
             this.dataGridView1.TabIndex = 9;
             // 
             // Form3

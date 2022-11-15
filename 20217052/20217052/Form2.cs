@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SQLite;
 
 namespace _20217052
 {
@@ -35,6 +36,22 @@ namespace _20217052
             //Form3を表示
             Form3 f3 = new Form3();
             f3.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            //コネクションを開いてテーブル作成して閉じる
+            using (var con = new SQLiteConnection("Data Source=table.db"))
+            {
+                con.Open();
+                using (SQLiteCommand command = con.CreateCommand())
+                {
+                    command.CommandText =
+                        "create table t_product(CD INTEGER PRIMARY KEY AUTOINCREMENT, productname TEXT, price INTEGER)";
+                    command.ExecuteNonQuery();
+                }
+                con.Close();
+            }
         }
     }
 }
