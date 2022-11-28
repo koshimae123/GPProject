@@ -66,7 +66,7 @@ namespace _20217052
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label2.Location = new System.Drawing.Point(241, 30);
+            this.label2.Location = new System.Drawing.Point(198, 30);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 20);
             this.label2.TabIndex = 3;
@@ -76,7 +76,7 @@ namespace _20217052
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label3.Location = new System.Drawing.Point(420, 30);
+            this.label3.Location = new System.Drawing.Point(333, 30);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(89, 20);
             this.label3.TabIndex = 4;
@@ -86,32 +86,33 @@ namespace _20217052
             // 
             this.textBox1.Location = new System.Drawing.Point(64, 53);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(158, 22);
+            this.textBox1.Size = new System.Drawing.Size(113, 22);
             this.textBox1.TabIndex = 5;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(245, 53);
+            this.textBox2.Location = new System.Drawing.Point(202, 53);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(158, 22);
+            this.textBox2.Size = new System.Drawing.Size(113, 22);
             this.textBox2.TabIndex = 6;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(424, 53);
+            this.textBox3.Location = new System.Drawing.Point(337, 53);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(158, 22);
+            this.textBox3.Size = new System.Drawing.Size(113, 22);
             this.textBox3.TabIndex = 7;
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button2.Location = new System.Drawing.Point(621, 41);
+            this.button2.Location = new System.Drawing.Point(621, 289);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(109, 43);
             this.button2.TabIndex = 8;
             this.button2.Text = "登録";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // dataGridView1
             // 
@@ -120,7 +121,7 @@ namespace _20217052
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(518, 326);
+            this.dataGridView1.Size = new System.Drawing.Size(540, 326);
             this.dataGridView1.TabIndex = 9;
             // 
             // Form3
