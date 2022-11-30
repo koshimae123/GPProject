@@ -30,6 +30,8 @@ namespace _20217052
 
         private void button2_Click(object sender, EventArgs e)
         {
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
             using (SQLiteConnection con = new SQLiteConnection("Data Source=table.db"))
             {
                 con.Open();
@@ -37,7 +39,7 @@ namespace _20217052
                 {
                     SQLiteCommand cmd = con.CreateCommand();
                     //インサート
-                    cmd.CommandText = "INSERT INTO HCS_product (name, address, phone_number) VALUES (name, address, phone_number)";
+                    cmd.CommandText = "INSERT INTO HCS_product (name, address, phone_number) VALUES (@name, @address, @phone_number)";
                     //パラメータセット
                     cmd.Parameters.Add("name", System.Data.DbType.String);
                     cmd.Parameters.Add("address", System.Data.DbType.String);
@@ -49,6 +51,12 @@ namespace _20217052
                     cmd.ExecuteNonQuery();
                     //コミット
                     trans.Commit();
+                    //DataTableを生成します。
+                    var dataTable = new DataTable();
+                    //SQLの実行
+                    var adapter = new SQLiteDataAdapter("SELECT * FROM HCS_product", con);
+                    adapter.Fill(dataTable);
+                    dataGridView1.DataSource = dataTable;
                 }
             }
         }

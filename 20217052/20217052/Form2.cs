@@ -53,5 +53,21 @@ namespace _20217052
                 con.Close();
             }
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            //コネクションを開いてテーブル削除して閉じる
+            using (var con = new SQLiteConnection("Data Source=table.db"))
+            {
+                con.Open();
+                using (SQLiteCommand command = con.CreateCommand())
+                {
+                    command.CommandText =
+                        "drop table HCS_product";
+                    command.ExecuteNonQuery();
+                }
+                con.Close();
+            }
+        }
     }
 }
