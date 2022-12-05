@@ -69,5 +69,15 @@ namespace _20217052
                 con.Close();
             }
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            //次画面を非表示
+            this.Visible = false;
+
+            //Form4を表示
+            Form4 f4 = new Form4();
+            f4.Show();
+        }
     }
 }
