@@ -79,5 +79,16 @@ namespace _20217052
             Form4 f4 = new Form4();
             f4.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //次画面を非表示
+            this.Visible = false;
+
+            //Form5を表示
+            Form5 f5 = new Form5();
+            f5.Show();
+
+        }
     }
 }

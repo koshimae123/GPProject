@@ -37,22 +37,48 @@ namespace _20217052
                 {
                     SQLiteCommand cmd = con.CreateCommand();
                     //インサート
-                    cmd.CommandText = "UPDATE FROM HCS_product set name = @name, address = @address, phone_number = phone_number WHERE member_id = @member_id";
+                    cmd.CommandText = "UPDATE HCS_product set name = @name, address = @add, phone_number = @phone WHERE member_id = @member_id";
                     //パラメータセット
                     cmd.Parameters.Add("name", System.Data.DbType.String);
-                    cmd.Parameters.Add("address", System.Data.DbType.String);
-                    cmd.Parameters.Add("phone_number", System.Data.DbType.Int64);
+                    cmd.Parameters.Add("add", System.Data.DbType.String);
+                    cmd.Parameters.Add("phone", System.Data.DbType.Int64);
                     cmd.Parameters.Add("member_id", System.Data.DbType.Int64);
                     //データ追加
-                    cmd.Parameters["name"].Value = textBox1.Text;
-                    cmd.Parameters["address"].Value = textBox2.Text;
-                    cmd.Parameters["phone_number"].Value = int.Parse(textBox3.Text);
-                    cmd.Parameters["member_id"].Value = int.Parse(textBox4.Text);
+                    cmd.Parameters["name"].Value = textBox2.Text;
+                    cmd.Parameters["add"].Value = textBox3.Text;
+                    cmd.Parameters["phone"].Value = int.Parse(textBox4.Text);
+                    cmd.Parameters["member_id"].Value = int.Parse(textBox1.Text);
                     cmd.ExecuteNonQuery();
                     //コミット
                     trans.Commit();
+                    //DataTableを生成します。
+                    var dataTable = new DataTable();
+                    //SQLの実行
+                    var adapter = new SQLiteDataAdapter("SELECT * FROM HCS_product", con);
+                    adapter.Fill(dataTable);
+                    dataGridView1.DataSource = dataTable;
                 }
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            using (SQLiteConnection con = new SQLiteConnection("Data Source=table.db"))
+            {
+                //DataTableを生成します。
+                var dataTable = new DataTable();
+                //SQLの実行
+                var adapter = new SQLiteDataAdapter("SELECT * FROM HCS_product", con);
+                adapter.Fill(dataTable);
+                dataGridView1.DataSource = dataTable;
+            }
+        }
+
+        private void Form4_Load(object sender, EventArgs e)
+        {
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            dataGridView1.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
         }
     }
 }

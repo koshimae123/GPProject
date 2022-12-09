@@ -35,10 +35,6 @@ namespace _20217052
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-            
-
-        }
+  
     }
 }

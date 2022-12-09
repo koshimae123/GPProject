@@ -65,7 +65,6 @@ namespace _20217052
             this.label1.Size = new System.Drawing.Size(677, 40);
             this.label1.TabIndex = 2;
             this.label1.Text = "HCSスポーツクラブ会員登録システム";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Form1
             // 

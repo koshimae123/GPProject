@@ -40,12 +40,13 @@ namespace _20217052
             this.label4 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(643, 271);
+            this.button1.Location = new System.Drawing.Point(643, 361);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(129, 66);
             this.button1.TabIndex = 0;
@@ -57,27 +58,27 @@ namespace _20217052
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label1.Location = new System.Drawing.Point(179, 56);
+            this.label1.Location = new System.Drawing.Point(139, 45);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(161, 20);
+            this.label1.Size = new System.Drawing.Size(296, 20);
             this.label1.TabIndex = 1;
-            this.label1.Text = "修正する会員番号";
+            this.label1.Text = "修正する会員番号を入力して下さい";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(346, 57);
+            this.textBox1.Location = new System.Drawing.Point(441, 43);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(181, 22);
+            this.textBox1.Size = new System.Drawing.Size(132, 22);
             this.textBox1.TabIndex = 2;
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(80, 154);
+            this.dataGridView1.Location = new System.Drawing.Point(78, 154);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(532, 273);
+            this.dataGridView1.Size = new System.Drawing.Size(547, 273);
             this.dataGridView1.TabIndex = 3;
             // 
             // label2
@@ -109,7 +110,7 @@ namespace _20217052
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(271, 116);
+            this.textBox3.Location = new System.Drawing.Point(271, 114);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(132, 22);
             this.textBox3.TabIndex = 7;
@@ -133,7 +134,7 @@ namespace _20217052
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(643, 361);
+            this.button2.Location = new System.Drawing.Point(643, 258);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(129, 66);
             this.button2.TabIndex = 10;
@@ -141,11 +142,22 @@ namespace _20217052
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(643, 154);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(129, 66);
+            this.button3.TabIndex = 11;
+            this.button3.Text = "確認";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label4);
@@ -159,6 +171,7 @@ namespace _20217052
             this.Controls.Add(this.button1);
             this.Name = "Form4";
             this.Text = "Form4";
+            this.Load += new System.EventHandler(this.Form4_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -178,5 +191,6 @@ namespace _20217052
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }
