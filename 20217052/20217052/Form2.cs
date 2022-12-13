@@ -90,5 +90,15 @@ namespace _20217052
             f5.Show();
 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            //次画面を非表示
+            this.Visible = false;
+
+            //Form6を表示
+            Form6 f6 = new Form6();
+            f6.Show();
+        }
     }
 }
